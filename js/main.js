@@ -1,6 +1,7 @@
 const searchForm = document.querySelector('form');
 const searchResultDiv = document.querySelector('.search-result');
 const container = document.querySelector('.container');
+const body = document.querySelector('body');
 const hero = document.querySelector('.hero');
 let searchQuery = '';
 const APP_ID = '9cc8b6af';
@@ -11,7 +12,9 @@ searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     searchQuery = e.target.querySelector('input').value;
     fetchAPI();
+    body.classList.remove('fixed-height');
     hero.classList.add('small');
+
 });
 
 async function fetchAPI(){
