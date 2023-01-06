@@ -41,6 +41,7 @@ section {
     background: url(../img/background.jpg);
     background-size: cover;
     transition: all .3s ease;
+    background-position: center;
 }
 
 .hero.small {
